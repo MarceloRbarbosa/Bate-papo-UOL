@@ -1,0 +1,199 @@
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #f3f3f3;
+    font-family: "Roboto", serif;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+header img{
+    width: 75px;
+    height: 75px;
+    margin-left: 15px;
+}
+
+header ion-icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+}
+
+ul {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 106px 0 80px 0 ;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    height: 40px;
+    font-size: 14px;
+    word-wrap: break-word;
+    word-break: normal;
+    margin-bottom: 3px;
+}
+.status {
+    background-color: #dcdcdc;
+}
+.message {
+    background-color: white;
+}
+.private_message {
+   background-color:#ffdede;
+}
+
+li .usuario {
+    font-weight: bolder;
+    color: black;
+    padding: 5px;
+}
+li .horario {
+    font-weight: 400;
+    color: #808080;
+    padding: 5px;
+}
+.mensagem-enviada {
+    padding: 5px;
+}
+.rodape{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+   bottom: 0%;
+   background-color: white;
+   box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.botao-msg {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+footer input {
+    width: 80%;
+    height: 25px;
+    border: none;
+    font-weight: 400;
+    font-size: 18px;
+    margin-left: 15px;
+
+}
+footer input::placeholder{
+    color: black;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.destino {
+    font-weight: 300;
+    font-size: 14px;
+    color: #808080;
+    margin-left: 15px;
+    font-style: italic;
+}
+.icone-msg {
+    font-size: 26px;
+    padding: 15px;
+    position: absolute;
+    right: 10px;
+    top:10px;
+}
+
+.menu-lateral {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 4;
+}
+
+.background{
+    width: 35%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 100%;
+    background-color: white;
+    text-align: center;
+    overflow-y:scroll;
+}
+
+aside span {
+font-size: 18px;
+}
+
+aside ion-icon {
+    font-size: 22px;
+}
+
+aside p {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.lista-usuarios, .pm {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.selecionar, .destinatarios {
+  display: flex;
+  font-size: 13px;
+  position: relative;
+  margin-bottom: 20px;  
+}
+
+.selecionar ion-icon, .destinatarios ion-icon {
+    margin-right: 5px;
+}
+
+.lista-usuarios span, .destinatarios span {
+ text-align: left;
+ width: 75%;
+ word-wrap: break-word;
+ word-break: break-all;
+}
+
+
+.check{
+    color: green;
+    position: absolute;
+    right: 15px;
+    display: none;
+}
+
+.check.pm-selected, .check.selecionar-selected{
+    display: initial;
+} 
+.escondido {
+    display: none;
+}

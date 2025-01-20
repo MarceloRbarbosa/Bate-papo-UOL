@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Uol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/reset.css" />
+    <link rel="stylesheet" href="Css/styles.css" />
+</head>
+<body>
+    <div class="menu-lateral escondido" >
+        <div  onclick="abrirMenuLateral()" class="background">
+        </div>    
+        <aside class="aside">
+        <p> Escolha um contato para enviar mensagem:</p> 
+             <div class="lista-usuarios">
+            <div onclick="selecionado(this)" class="selecionar">
+                <ion-icon name="people"></ion-icon><span>Todos</span>
+                <ion-icon class="check"  name="checkmark"></ion-icon>
+            </div>
+            </div>          
+        <p>Escolha a visibilidade</p>
+            <div  class="pm">
+            <div onclick="destinatarios(this)" data-atributos="marcado" class="destinatarios">
+                <ion-icon name="lock-open"></ion-icon>
+                <span>Público</span>
+                <ion-icon class="check" name="checkmark"></ion-icon>
+            </div>
+            <div onclick="destinatarios(this)" data-atributos ="marcado" class="destinatarios">
+                 <ion-icon name="lock-closed"></ion-icon>
+                 <span>Reservadamente</span>
+                    <ion-icon class="check" name="checkmark"></ion-icon>
+            </div>
+        </div>  
+    </aside>
+    </div>
+    <main>
+    <header>
+        <img src="imagem/download.jpeg">
+        <ion-icon onclick="abrirMenuLateral()" name="people" ></ion-icon>
+    </header>   
+       <ul class="mensagens"></ul>
+    <footer class="rodape">
+        <div class="botao-msg">
+            <input id="valormsg" type="text" placeholder="Escreva aqui ..." />
+            <ion-icon class="icone-msg" onclick="enviarMensagem()" data-atributos="enviar-msg" name="paper-plane-outline"></ion-icon>        
+        </div>
+        <span class="destino"> Enviando para todos (público)</span>
+    </footer>
+</main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
